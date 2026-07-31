@@ -20,9 +20,30 @@
   }
   .wrap{ width:100%; max-width:100%; margin:0; padding:32px clamp(16px,2vw,40px) 80px; }
 
-  header{margin-bottom:28px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px;}
+  header{margin-bottom:28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
   header h1{font-size:1.8rem; font-weight:800; margin:0 0 6px; letter-spacing:-.5px; color:#0f172a;}
   header p{color:var(--mut); margin:0; font-size:1rem; font-weight:500;}
+
+  /* --- ESTILOS NUEVOS PARA LOS LOGOS --- */
+  .logos-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo-dark-bg {
+    background-color: #0f172a; /* Fondo azul oscuro corporativo para el logo blanco */
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  .logo-img {
+    max-height: 38px;
+    width: auto;
+    object-fit: contain;
+  }
+  /* ------------------------------------- */
 
   .kpis{display:flex; gap:16px; flex-wrap:wrap; margin:20px 0 28px;}
   .kpi{flex:1; min-width:160px; background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px;
@@ -109,6 +130,14 @@
     <div>
       <h1>Cronograma COS Selection 2026</h1>
       <p>Dashboard Ejecutivo Consolidado</p>
+    </div>
+    
+    <div class="logos-wrapper">
+      <img src="public/cos.png" alt="COS Logo" class="logo-img" onerror="this.style.display='none'">
+      
+      <div class="logo-dark-bg">
+        <img src="public/Groupcos_blanco.png" alt="GroupCos Logo" class="logo-img" onerror="this.style.display='none'">
+      </div>
     </div>
   </header>
 
